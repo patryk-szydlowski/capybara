@@ -1,33 +1,33 @@
 # Type
 - name: 'type: feature'
-  color: 91CA55
+  color: 1D76DB
 - name: 'type: chore'
-  color: E6E6E6
+  color: bfdadc
 - name: 'type: bug'
-  color: E11D21
+  color: d93f0b
 - name: 'type: documentation'
-  color: E6E6E6
+  color: bfdadc
 - name: 'type: discussion'
-  color: B564D2
+  color: d4c5f9
 
 # Priority
 - name: 'priority: low'
-  color: 91CA55
+  color: 0e8a16
 - name: 'priority: medium'
-  color: FBCA04
+  color: fbca04
 - name: 'priority: high'
-  color: EB6420
+  color: eb6420
 - name: 'priority: critical'
-  color: E11D21
+  color: d93f0b
 
 # Status
 - name: 'status: ready'
-  color: 91CA55
+  color: 0e8a16
 - name: 'status: work in progress'
-  color: FBCA04
+  color: fbca04
 - name: 'status: code review'
-  color: F7B971
+  color: f9d0c4
 - name: 'status: blocked'
-  color: E11D21
+  color: d93f0b
 - name: 'status: abandoned'
-  color: E6E6E6
+  color: bfdadc
