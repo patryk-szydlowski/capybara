@@ -1,9 +1,8 @@
 name: Github Labels Workflow
 
-on: push
-
-#  schedule:
-#    - cron: 0 0 * * 0
+on:
+  schedule:
+    - cron: 0 0 * * 0
 
 jobs:
   labels:
@@ -21,7 +20,7 @@ jobs:
       - name: Download labels script
         run: yarn global add github-label-sync
 
-      - name: Run script to create Github labels
+      - name: Run script to create github labels
         run: npx github-label-sync --labels .github/labels.yml patryk-szydlowski/capybara
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
