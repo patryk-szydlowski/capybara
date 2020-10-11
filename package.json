@@ -12,7 +12,11 @@
   },
   "homepage": "https://github.com/patryk-szydlowski/capybara#readme",
   "scripts": {
-    "start": "expo start"
+    "start": "expo start",
+    "lint": "eslint .",
+    "compile": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
