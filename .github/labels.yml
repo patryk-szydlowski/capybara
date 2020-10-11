@@ -1,0 +1,33 @@
+# Type
+- name: 'type: feature'
+  color: 1D76DB
+- name: 'type: chore'
+  color: bfdadc
+- name: 'type: bug'
+  color: d93f0b
+- name: 'type: documentation'
+  color: bfdadc
+- name: 'type: discussion'
+  color: d4c5f9
+
+# Priority
+- name: 'priority: low'
+  color: 0e8a16
+- name: 'priority: medium'
+  color: fbca04
+- name: 'priority: high'
+  color: eb6420
+- name: 'priority: critical'
+  color: d93f0b
+
+# Status
+- name: 'status: ready'
+  color: 0e8a16
+- name: 'status: work in progress'
+  color: fbca04
+- name: 'status: code review'
+  color: f9d0c4
+- name: 'status: blocked'
+  color: d93f0b
+- name: 'status: abandoned'
+  color: bfdadc
