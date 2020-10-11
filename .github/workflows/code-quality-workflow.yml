@@ -1,0 +1,49 @@
+name: Code Quality Workflow
+
+on: pull_request
+
+jobs:
+  lint:
+    name: Run ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
+
+      - name: Run linter
+        run: yarn lint
+
+  compile:
+    name: Run Typescript compiler
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
+
+      - name: Compile
+        run: yarn compile
+
+  unit-test:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
+
+      - name: Run unit tests
+        run: yarn test
