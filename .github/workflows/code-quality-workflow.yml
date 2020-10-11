@@ -15,8 +15,33 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-outp ut name=dir::$(yarn cache dir)"
+
+      - name: Cache yarn cache
+        uses: actions/cache@v2
+        id: cache-yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Cache node modules
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ matrix.node-version }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-nodemodules-
+
       - name: Download dependencies
         run: yarn install --frozen-lockfile
+        if: |
+          steps.cache-yarn-cache.outputs.cache-hit != 'true' ||
+          steps.cache-node-modules.outputs.cache-hit != 'true'
 
       - name: Run linter
         run: yarn lint
@@ -33,8 +58,33 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-outp ut name=dir::$(yarn cache dir)"
+
+      - name: Cache yarn cache
+        uses: actions/cache@v2
+        id: cache-yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Cache node modules
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ matrix.node-version }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-nodemodules-
+
       - name: Download dependencies
         run: yarn install --frozen-lockfile
+        if: |
+          steps.cache-yarn-cache.outputs.cache-hit != 'true' ||
+          steps.cache-node-modules.outputs.cache-hit != 'true'
 
       - name: Compile
         run: yarn compile
@@ -51,8 +101,33 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-outp ut name=dir::$(yarn cache dir)"
+
+      - name: Cache yarn cache
+        uses: actions/cache@v2
+        id: cache-yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Cache node modules
+        id: cache-node-modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ matrix.node-version }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ matrix.node-version }}-nodemodules-
+
       - name: Download dependencies
         run: yarn install --frozen-lockfile
+        if: |
+          steps.cache-yarn-cache.outputs.cache-hit != 'true' ||
+          steps.cache-node-modules.outputs.cache-hit != 'true'
 
       - name: Run unit tests
         run: yarn test
