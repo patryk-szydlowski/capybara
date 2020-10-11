@@ -1,8 +1,12 @@
 import React from 'react'
 import { Text, View } from 'react-native'
 
-export const AppRoot: React.FC = () => (
-  <View>
-    <Text>Hello Capybara</Text>
-  </View>
+import { AppProvider } from './app.provider'
+
+export const AppRoot: React.VFC = () => (
+  <AppProvider>
+    <View>
+      <Text>Hello Capybara</Text>
+    </View>
+  </AppProvider>
 )
