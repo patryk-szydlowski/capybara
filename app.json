@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "capybara",
+    "slug": "capybara",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "entryPoint": "src/app"
+  }
+}
