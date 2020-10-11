@@ -17,9 +17,9 @@ jobs:
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
-        run: echo "::set-outp ut name=dir::$(yarn cache dir)"
+        run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - name: Cache yarn cache
+      - name: Cache yarn modules
         uses: actions/cache@v2
         id: cache-yarn-cache
         with:
@@ -60,9 +60,9 @@ jobs:
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
-        run: echo "::set-outp ut name=dir::$(yarn cache dir)"
+        run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - name: Cache yarn cache
+      - name: Cache yarn modules
         uses: actions/cache@v2
         id: cache-yarn-cache
         with:
@@ -103,9 +103,9 @@ jobs:
 
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
-        run: echo "::set-outp ut name=dir::$(yarn cache dir)"
+        run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      - name: Cache yarn cache
+      - name: Cache yarn modules
         uses: actions/cache@v2
         id: cache-yarn-cache
         with:
