@@ -1,12 +1,11 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+
+import { BottomNavigation } from 'features/navigation'
 
 import { AppProvider } from './app.provider'
 
 export const AppRoot: React.VFC = () => (
   <AppProvider>
-    <View>
-      <Text>Hello Capybara</Text>
-    </View>
+    <BottomNavigation />
   </AppProvider>
 )
