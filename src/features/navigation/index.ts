@@ -1,1 +1,2 @@
-export * from './bottom.navigation'
+export * from './bottom-navigation.view'
+export { tabBarOptions } from './bottom-navigation.const'
