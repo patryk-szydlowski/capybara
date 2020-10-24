@@ -1,12 +1,12 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import { routes, tabBarOptions } from './bottom-navigation.const'
 import { BlurBottomTabBar } from './components'
+import { routes, tabBarOptions } from './options'
 
 const { Navigator, Screen } = createBottomTabNavigator()
 
-export const BottomNavigationView: React.VFC = () => (
+export const BottomNavigation: React.VFC = () => (
   <Navigator
     initialRouteName={routes.home.name}
     tabBar={BlurBottomTabBar}
