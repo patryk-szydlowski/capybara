@@ -1,6 +1,8 @@
 # Capybara
 
 - [Prerequisites](#prerequisites)
+- [Development](#development)
+- [Contributing](#contributing)
 
 ## Prerequisites
 
