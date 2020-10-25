@@ -1,1 +1,1 @@
-export * from './bottom.navigation'
+export * from './root.navigation'
